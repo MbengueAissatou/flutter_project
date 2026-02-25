@@ -1,16 +1,26 @@
-# task_manager_app
+# DoctorPoint
 
-A new Flutter project.
+Application mobile Flutter de gestion hospitalière (mock backend inclus).
 
-## Getting Started
+## Stack
+- Flutter 3.x / Dart 3.x
+- Clean Architecture (Data/Domain/Presentation)
+- flutter_bloc, go_router (ShellRoute + guards), dio, hive, secure storage, get_it, dartz, fl_chart, firebase_messaging
 
-This project is a starting point for a Flutter application.
+## Installation
+1. Installer Flutter 3.x
+2. `flutter pub get`
+3. `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## Comptes mock
+- Email: `admin@doctorpoint.sn`
+- Mot de passe: `password123`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Architecture
+- `lib/core` : design system, thème, réseau, erreurs
+- `lib/features` : modules (auth, dashboard, rdv, patients, médecins, consultations, stock, notifications, paramètres)
+- `lib/shared/mock_data.dart` : données sénégalaises mock prêtes à remplacer par API Dio.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tests
+- `flutter test test/unit/login_usecase_test.dart`
+- `flutter test test/unit/auth_bloc_test.dart`
